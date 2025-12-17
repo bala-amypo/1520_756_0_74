@@ -13,9 +13,9 @@ import com.example.demo.service.LocationService;
 @RestController
 public class LocationController {
     @Autowired
-    LocationService locationservice;
+    private LocationService locationservice;
     @PostMapping("/addlocation")
-    public LocationEntity add (@RequestBody LocationEntity le){
+    public LocationEntity add(@RequestBody LocationEntity le){
         return locationservice.createlocation(le);
     }
     @GetMapping("/showlocation")
